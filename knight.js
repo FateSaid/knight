@@ -90,7 +90,7 @@ function findPath(start, end) {
   }
   let result = array.map((obj) => obj.from);
   result.unshift([endX, endY]);
-
+  console.log(`You made it in ${result.length} moves! Here's your path:`);
   return result.reverse();
 }
 
