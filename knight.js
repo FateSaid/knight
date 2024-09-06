@@ -53,6 +53,9 @@ function generateMoves(start) {
 
 function knightMoves(start, end) {
   let [endX, endY] = end;
+  if (start[0] > 7 || start[1] > 7 || endX > 7 || endY > 7) {
+    throw new Error("Input is bigger than graph coordinates");
+  }
   generateMoves(start);
 
   while (queue.length !== 0) {
